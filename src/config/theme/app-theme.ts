@@ -15,6 +15,11 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.background,
   },
+  calculatorContainer: {
+    flex: 1,
+    padding: 20,
+    justifyContent: 'flex-end',
+  },
   mainResult: {
     fontSize: 70,
     color: colors.textPrimary,
@@ -27,5 +32,26 @@ export const styles = StyleSheet.create({
     fontSize: 40,
     textAlign: 'right',
     fontWeight: '300',
+  },
+  button: {
+    width: 80,
+    height: 80,
+    backgroundColor: colors.darkGray,
+    borderRadius: 100,
+    justifyContent: 'center',
+    marginHorizontal: 10,
+  },
+  buttonText: {
+    textAlign: 'center',
+    padding: 10,
+    fontSize: 30,
+    color: 'white',
+    fontWeight: '300',
+  },
+  row: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginBottom: 18,
+    paddingHorizontal: 10,
   },
 });
