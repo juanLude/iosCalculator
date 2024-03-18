@@ -6,7 +6,8 @@ import {useCalculator} from '../hooks/useCalculator';
 
 export const CalculatorScreen = () => {
   const {
-    number,
+    formula,
+
     previusNumber,
     buildNumber,
     clean,
@@ -22,11 +23,15 @@ export const CalculatorScreen = () => {
     <View style={styles.calculatorContainer}>
       <View style={cont.container}>
         <Text style={styles.mainResult} adjustsFontSizeToFit numberOfLines={1}>
-          {number}
+          {formula}
         </Text>
-        <Text style={styles.subResult} adjustsFontSizeToFit numberOfLines={1}>
-          {previusNumber === '0' ? ' ' : previusNumber}
-        </Text>
+        {formula === previusNumber ? (
+          <Text style={styles.subResult} />
+        ) : (
+          <Text style={styles.subResult} adjustsFontSizeToFit numberOfLines={1}>
+            {previusNumber}
+          </Text>
+        )}
       </View>
 
       <View style={styles.row}>
